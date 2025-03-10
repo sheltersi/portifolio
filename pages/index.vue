@@ -15,20 +15,20 @@
         <Hero />
     </section>
 
-    <section id="hero-section">
+    <section id="about-me-section">
         <AboutMe />
     </section>
 
-    <section id="skils-section">
+    <section id="skills-section">
         <Skills />
+    </section>
+
+    <section id="experience-section">
+        <Experience />
     </section>
 
     <div class="min-h-screen mt-4 bg-gray-100 py-12 px-6 sm:px-10"></div>
     <section class="max-w-4xl mx-auto text-gray-900 mt-20 space-y-6">
-    
-    <section id="experience-section">
-        <Experience />
-    </section>
 
     <section id="projects-section">
         <Projects />
