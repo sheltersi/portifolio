@@ -85,8 +85,8 @@ onMounted(() => {
         <p class="text-lg md:text-2xl mt-4">Full-Stack Developer | {{ skillTypedText }}</p>
         
         <div class="mt-6 flex justify-center space-x-4">
-          <a href="#projects" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-md">View My Work</a>
-          <a href="mailto:your@email.com" class="px-6 py-3 border border-gray-400 hover:bg-gray-700 rounded-lg">Hire Me</a>
+          <a href="#projects-section" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg shadow-md">View My Work</a>
+          <a href="mailto:sheltersibanda002@email.com" class="px-6 py-3 border border-gray-400 hover:bg-gray-700 rounded-lg">Hire Me</a>
         </div>
   
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">

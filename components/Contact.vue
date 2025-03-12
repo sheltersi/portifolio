@@ -68,19 +68,17 @@
             <div class="mt-10 text-center">
                 <h3 class="text-lg font-semibold">Follow Me</h3>
                 <div class="flex justify-center space-x-6 mt-4 text-2xl">
-                    <a href="#" class="hover:text-blue-400 transition">
+                    <a href="https://github.com/sheltersi" class="hover:text-blue-400 transition">
                         <font-awesome-icon :icon="['fab', 'github']" class="text-3xl" />
                     </a>
-                    <a href="#" class="hover:text-blue-400 transition">
+                    <a href=" https://x.com/ShelterSibs?t=qNVT1bgU2A8nrBf1aBITdQ&s=08" class="hover:text-blue-400 transition">
                         <font-awesome-icon :icon="['fab', 'square-x-twitter']" class="text-3xl" />
-                        <!-- <font-awesome-icon :icon="['fab', 'twitter']" class="text-3xl" /> -->
                     </a>
-                    <a href="#" class="hover:text-blue-400 ">
+                    <a href="https://www.linkedin.com/in/shelter-sibanda-9761a41b5/" class="hover:text-blue-400 ">
                         <font-awesome-icon :icon="['fab', 'linkedin']" class="text-3xl" />
 
                     </a>
-                    <a href="mailto:your@email.com" class="hover:text-blue-400 transition">
-                        <!-- <i class="fas fa-envelope"></i> -->
+                    <a href="mailto:sheltersibanda002@email.com" class="hover:text-blue-400 transition">
                         <font-awesome-icon :icon="['fas', 'envelope']" class="text-3xl" /></a>
 
                 </div>
