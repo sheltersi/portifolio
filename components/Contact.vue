@@ -87,25 +87,124 @@
     </section>
 </template>
 
-<script>
-export default {
-    data() {
-        return {
-            form: {
-                name: '',
-                email: '',
-                message: ''
-            }
-        };
-    },
-    methods: {
-        submitForm() {
-            alert("Thank you for reaching out! I'll get back to you soon.");
-            this.form.name = "";
-            this.form.email = "";
-            this.form.message = "";
-        }
+<!-- <script setup>
+import { ref } from "vue";
+
+const form = ref({
+  name: '',
+  email: '',
+  message: '',
+});
+
+const submitForm = () => {
+  const formElement = document.createElement('form');
+  formElement.method = 'POST';
+  formElement.action = 'https://formsubmit.co/sheltersibanda002@gmail.com';
+
+  Object.keys(form.value).forEach((key) => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    input.value = form.value[key];
+    formElement.appendChild(input);
+  });
+
+  document.body.appendChild(formElement);
+  formElement.submit();
+
+// Show success message with SweetAlert2
+Swal.fire({
+    title: "Success!",
+    text: "Your message has been sent successfully.",
+    icon: "success",
+    confirmButtonText: "OK",
+  });
+
+  // Reset the form after submission
+  form.value = {
+    name: "",
+    email: "",
+    message: "",
+  };
+};
+</script> -->
+
+
+<!-- <script setup>
+import { ref } from "vue";
+import Swal from "sweetalert2"; // If you're using SweetAlert2
+
+const form = ref({
+  name: '',
+  email: '',
+  message: '',
+});
+
+const submitForm = (event) => {
+  event.preventDefault(); // Prevent the default form submission
+
+  const formElement = document.createElement('form');
+  formElement.method = 'POST';
+  formElement.action = 'https://formsubmit.co/sheltersibanda002@gmail.com';
+
+  Object.keys(form.value).forEach((key) => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = key;
+    input.value = form.value[key];
+    formElement.appendChild(input);
+  });
+
+  document.body.appendChild(formElement);
+  formElement.submit();
+
+  // Show success message with SweetAlert2
+  Swal.fire({
+    title: "Success!",
+    text: "Your message has been sent successfully.",
+    icon: "success",
+    confirmButtonText: "OK",
+  });
+
+  // Reset the form after submission
+  form.value = {
+    name: "",
+    email: "",
+    message: "",
+  };
+};
+</script> -->
+
+
+<script setup>
+import { ref } from "vue";
+import Swal from "sweetalert2"; // If you're using SweetAlert2
+
+// yQGDqSIOcL9kHEwM
+const form = ref({
+  name: '',
+  email: '',
+  message: '',
+});
+
+const submitForm = async () => {
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form.value)
+    });
+
+    if (response.ok) {
+      Swal.fire('Success!', 'Your message has been sent!', 'success');
+      form.value = { name: '', email: '', message: '' };
+    } else {
+      Swal.fire('Error!', 'Failed to send message.', 'error');
     }
+  } catch (error) {
+    console.error(error);
+    Swal.fire('Oops!', 'Something went wrong!', 'error');
+  }
 };
 </script>
 
